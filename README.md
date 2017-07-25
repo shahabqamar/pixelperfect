@@ -1,6 +1,8 @@
 # PixelPerfect
 A chrome extension for obsessive compulsive developers who like their web designs pixel perfect.
 
+![alt text](https://blog.hubspot.com/hs-fs/hub/53/file-282852170-png/Blog-Related_Images/officespace-meme.png "QA guy in a nutshell")
+
 ## About PixelPerfect
 I have been working on a Chrome extension, which I hope will make our lives a bit easier when it comes to "PSD to HTML" conversion. The extension (tentatively called PixelPerfect) allows you to overlay/onion-skin the static design on a web page, therefore, you are not solely relying on the good’ol eye-squinting technique or going back and forth between the static design and Zeplin measurements. I fished around for an extension that ticked all the boxes but could not find one so developed my own instead. Some cool features implemented here:
 *	Gulp/grunt/webpack friendly (extension auto restores overlay settings on refresh, even if you close and relaunch the browser window)
