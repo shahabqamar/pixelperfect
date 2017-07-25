@@ -2,7 +2,7 @@
 A chrome extension for obsessive compulsive developers who like their web designs pixel perfect.
 
 ## About PixelPerfect
-I have been working on a Chrome extension, which I hope will make our lives a bit easier when it comes to cutups. The extension (tentatively called PixelPerfect) allows you to overlay/onion-skin the static design on top of the cutup so you are not solely relying on the good’ol eye-squinting technique or going back and forth between cutup and Zeplin measurements. I fished around for an extension that ticked all the boxes but could not find one so developed my own instead. Some cool features I have implemented:
+I have been working on a Chrome extension, which I hope will make our lives a bit easier when it comes to "PSD to HTML" conversion. The extension (tentatively called PixelPerfect) allows you to overlay/onion-skin the static design on top of the cutup so you are not solely relying on the good’ol eye-squinting technique or going back and forth between cutup and Zeplin measurements. I fished around for an extension that ticked all the boxes but could not find one so developed my own instead. Some cool features I have implemented:
 *	Gulp/grunt/webpack friendly (extension auto restores overlay settings on refresh, even if you close and relaunch the browser window)
 *	Overlay switching using media queries (add as many screens as you like for mobile, tablet, desktop and in between)
 *	Ability to add multiple filters on each overlay (opacity, grayscale, blur, etc)
