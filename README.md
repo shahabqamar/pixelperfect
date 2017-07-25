@@ -23,6 +23,6 @@ Just need to add some fancy-pants input validation before I go ahead and submit 
 4. Click on **Load unpacked extension...** and select the location of the repo.
 5. Enjoy!
 
-## Known limitations
+## Known issues
 * The extension only supports web pages that are served over http or https. Web pages accessed locally (over a file:/// protocol) are currently not supported. This also holds true for static design URLs over file:///. 
-* URL for static design and JSON import validation is flaky. The extension will fail silently if you put in invalid values.  
+* URL and JSON import validations are flaky. The extension will fail silently if you put in invalid values.  
