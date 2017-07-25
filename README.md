@@ -1,4 +1,4 @@
-# PixelPerfect
+# PixelPerfect v0.0.1
 A chrome extension for obsessive compulsive developers who like their web designs pixel perfect.
 
 ![alt text](https://blog.hubspot.com/hs-fs/hub/53/file-282852170-png/Blog-Related_Images/officespace-meme.png "QA guy in a nutshell")
