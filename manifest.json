@@ -11,7 +11,7 @@
     },
     "browser_action": {
         "default_icon": "icons/icon48.png",
-        "default_title": "PixelFit",
+        "default_title": "PixelPerfect",
         "default_popup": "popup.html"
     },
     "background": {
