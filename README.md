@@ -20,5 +20,5 @@ Just need to add some fancy-pants input validation before I go ahead and submit 
 5. Enjoy!
 
 ## Known limitations
-* The extension only supports web pages that are served over http or https. Web pages accessed locally (over a file:/// protocol) are currently not supported. This also holds true for static design URLs. 
+* The extension only supports web pages that are served over http or https. Web pages accessed locally (over a file:/// protocol) are currently not supported. This also holds true for static design URLs over file:///. 
 * URL for static design and JSON import validation is flaky. The extension will fail silently if you put in invalid values.  
