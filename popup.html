@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="css/framework.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<div id="mainPopup">
+    <nav class="panel">
+        <p class="panel-heading text-center">
+            <img class="popup-logo" src="icons/icon.svg" /> <span class="popup-logo-text">PixelPerfect</span>
+        </p>
+
+        <div id="screens-container" class="screens">
+        </div>
+        <div class="text-center button-add-screen">
+            <a class="button is-small is-warning" id="add-screen">
+                <span class="icon is-small">
+                    <i class="fa fa-image"></i>
+                </span>
+                <span>Add Screen</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="panel-block panel-block-footer">
+        <footer class="card-footer">
+            <a id="update" title="Apply and save settings" class="card-footer-item"><i class="fa fa-check"></i></a>
+            <a id="export" title="Export settings" data-target="modal-export" data-clipboard-target="#exported-settings" class="card-footer-item modal-button btn-clipboard"><i class="fa fa-upload"></i></a>
+            <a id="import" title="Import settings" data-target="modal-import" class="card-footer-item modal-button"><i class="fa fa-download"></i></a>
+            <a id="clear-settings" title="Reset settings" class="card-footer-item "><i class="fa fa-ban"></i></a>
+        </footer>
+    </div>
+</div>
+<div id="modal-export" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <textarea class="textarea" readonly id="exported-settings"></textarea>
+        <div class="modal-subtext text-center">
+            <i class="fa fa-check"></i> copied to clipboard
+        </div>
+    </div>
+    <button class="modal-close is-large"></button>
+</div>
+<div id="modal-import" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <textarea class="textarea" id="import-settings-value" placeholder="paste settings here"></textarea>
+        <div class="modal-subtext text-center">
+            <a class="button is-small is-primary" id="import-settings">
+                <span class="icon is-small">
+                    <i class="fa fa-download"></i>
+                </span>
+                <span>Import</span>
+            </a>
+        </div>
+    </div>
+    <button class="modal-close is-large"></button>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/mustache.min.js"></script>
+<script src="vendor/clipboard.min.js"></script>
+<script src="main.js"></script>
+<script id="screen-template" type="text/template">
+    {{#screens}}
+    <div class="panel-block screen-block">
+        <div class="card fullwidth">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img class="image-object" src="{{img_url}}" alt="Static Design Image">
+                </figure>
+                <a title="Remove screen" class="button is-danger remove-screen"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="card-content">
+                <div class="content">
+                    <p class="control has-icons-left">
+                        <input class="input is-small setting-url" data-setting="url" type="text" value="{{url}}" placeholder="Static Design URL">
+                        <span class="icon is-small is-left"> <i class="fa fa-image"></i></span>
+                    </p>
+                    <div class="field">
+                        <div class="control">
+                            <label class="fullwidth field-setting">
+                                    Opacity <code>{{opacity}}</code>
+                                    <input class="fullwidth setting-filter" data-setting="opacity" value="{{opacity}}" min="0" max="1" step="0.05" type="range" />
+                                </label>
+                            <label class="fullwidth field-setting">
+                                    Grayscale <code>{{grayscale}}</code>
+                                    <input class="fullwidth setting-filter" data-setting="grayscale"  value="{{grayscale}}" min="0" max="100" step="1" type="range" />
+                                </label>
+                            <label class="fullwidth field-setting">
+                                    Brightness <code>{{brightness}}</code>
+                                    <input class="fullwidth setting-filter" data-setting="brightness"  value="{{brightness}}" min="100" max="200" step="1" type="range" />
+                                </label>
+                            <label class="fullwidth field-setting">
+                                    Contrast <code>{{contrast}}</code>
+                                    <input class="fullwidth setting-filter" data-setting="contrast"  value="{{contrast}}" min="100" max="200" step="1" type="range" />
+                                </label>
+                            <label class="fullwidth field-setting">
+                                    Blur <code>{{blur}}</code>
+                                    <input class="fullwidth setting-filter" data-setting="blur"  value="{{blur}}" min="0" max="5" step="0.5" type="range" />
+                                </label>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div>
+                            <input class="input is-small is-mq setting-filter" value="{{min}}" data-setting="min" type="number" placeholder="min (px)">
+                            <input class="input is-small is-mq setting-filter" value="{{max}}" data-setting="max" type="number" placeholder="max (px)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/screens}}
+</script>

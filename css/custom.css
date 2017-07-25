@@ -1,0 +1,98 @@
+html,
+body,
+#mainPopup {
+    height: 600px;
+    width: 300px;
+}
+
+.popup-logo {
+    max-width: 30px;
+}
+
+.popup-logo-text {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+label {
+    font-size: 12px;
+}
+
+.is-mq {
+    display: inline-block;
+    width: 49%;
+}
+
+.panel-block {
+    display: block;
+}
+
+.button-add-screen {
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+
+.card-footer-item {
+    color: #fff;
+}
+
+.card-footer-item:hover,
+#clear-settings:hover {
+    color: #fff;
+    background: #333;
+}
+
+.panel-block-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.remove-screen {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.card-image {
+    overflow: hidden;
+}
+
+#clear-settings {
+    background: #ff3860;
+}
+
+#exported-settings,
+#import-settings-value {
+    max-height: 400px;
+    overflow: scroll;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+#import-settings {
+    overflow: overlay;
+}
+
+.modal-subtext {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 15px;
+}
+
+figure {
+    background: url(../images/bg-transparent.png) center center;
+    background-size: cover;
+}
