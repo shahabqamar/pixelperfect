@@ -12,7 +12,7 @@ I fished around for an extension that ticked all the boxes but could not find on
 *	Ability to add multiple filters on each overlay (opacity, grayscale, blur, etc)
 *	Non-invasive overlay (so you can still interact with the content e.g. inspect element or hover)
 *	Sync overlay settings across computers (if you are logged into Chrome)
-*	Ability to import/export overlay settings (so you can easily switch between different cutups)
+*	Ability to import/export overlay settings (so you can easily switch between different projects)
 
 Just need to add some fancy-pants input validation before I go ahead and submit it to the Chrome store. Feedback and feature requests are welcome.
 
