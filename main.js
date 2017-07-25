@@ -38,7 +38,7 @@ $("#update").click(function() {
                 iconUrl: 'icons/icon128.png'
             }, function() {
                 chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
-                window.close();
+                //window.close();
             });
         });
     });
@@ -119,6 +119,27 @@ $('#import-settings').on('click', function() {
 //on export
 $('#export').on('click', function() {
     $("#exported-settings").val(JSON.stringify(generateSettings()));
+});
+
+//on export
+$('#import-settings-btn').on('click', function() {
+    console.log('clearing settings');
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        chrome.storage.sync.remove(
+            ['project_url', 'settings'],
+            function() {
+                chrome.notifications.create({
+                    type: "basic",
+                    title: "PixelPerfect",
+                    message: "Reset completed for\n" + tabs[0].url,
+                    iconUrl: 'icons/icon128.png'
+                }, function() {
+                    chrome.tabs.update(tabs[0].id, { url: tabs[0].url });
+                    $('#modal-reset .modal-close').trigger('click');
+                    window.close();
+                });
+            });
+    });
 });
 
 //METHODS

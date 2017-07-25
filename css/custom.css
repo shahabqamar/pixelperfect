@@ -72,6 +72,10 @@ label {
     background: #ff3860;
 }
 
+#import-settings-btn {
+    margin-top: 10px;
+}
+
 #exported-settings,
 #import-settings-value {
     max-height: 400px;

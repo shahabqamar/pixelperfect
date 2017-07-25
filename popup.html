@@ -25,7 +25,7 @@
             <a id="update" title="Apply and save settings" class="card-footer-item"><i class="fa fa-check"></i></a>
             <a id="export" title="Export settings" data-target="modal-export" data-clipboard-target="#exported-settings" class="card-footer-item modal-button btn-clipboard"><i class="fa fa-upload"></i></a>
             <a id="import" title="Import settings" data-target="modal-import" class="card-footer-item modal-button"><i class="fa fa-download"></i></a>
-            <a id="clear-settings" title="Reset settings" class="card-footer-item "><i class="fa fa-ban"></i></a>
+            <a id="clear-settings" title="Reset settings" data-target="modal-reset" class="card-footer-item modal-button"><i class="fa fa-ban"></i></a>
         </footer>
     </div>
 </div>
@@ -49,6 +49,21 @@
                     <i class="fa fa-download"></i>
                 </span>
                 <span>Import</span>
+            </a>
+        </div>
+    </div>
+    <button class="modal-close is-large"></button>
+</div>
+<div id="modal-reset" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="modal-subtext text-center">
+            Hey, you sure? This will wipe out all extension settings.
+            <a class="button is-small is-danger" id="import-settings-btn">
+                <span class="icon is-small">
+                    <i class="fa fa-ban"></i>
+                </span>
+                <span>I'm sure. Reset everything!</span>
             </a>
         </div>
     </div>
