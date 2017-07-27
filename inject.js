@@ -36,7 +36,7 @@ function _os_overlay_61445155(settings) {
             os_overlay_img[i].id = "_os_overlay_img_61445155_" + i;
             os_overlay_img[i].className = "_os_overlay_img_61445155";
             os_overlay_img[i].src = settings[i].url;
-            os_overlay_img[i].style.cssText = 'opacity:' + settings[i].opacity + '; filter: grayscale(' + settings[i].grayscale + '%) ' + 'brightness(' + settings[i].brightness + '%) ' + 'contrast(' + settings[i].contrast + '%) ' + 'blur(' + settings[i].blur + 'px);';
+            os_overlay_img[i].style.cssText = 'width: auto; opacity:' + settings[i].opacity + '; filter: grayscale(' + settings[i].grayscale + '%) ' + 'brightness(' + settings[i].brightness + '%) ' + 'contrast(' + settings[i].contrast + '%) ' + 'blur(' + settings[i].blur + 'px);';
             os_overlay.appendChild(os_overlay_img[i]);
 
             var min = "";
