@@ -110,3 +110,7 @@ figure {
 .control-offset {
     margin-bottom: 1rem;
 }
+
+.label-center {
+    font-size: 12px;
+}
