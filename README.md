@@ -9,6 +9,7 @@ I have been working on a Chrome extension, which I hope will make our lives a bi
 I fished around for an extension that ticked all the boxes but could not find one so developed my own instead. Some cool features implemented here:
 *	Gulp/grunt/webpack friendly (extension auto restores overlay settings on refresh, even if you close and relaunch the browser window)
 *	Overlay switching using media queries (add as many screens as you like for mobile, tablet, desktop and in between)
+*	Ability to offset overlay position
 *	Ability to add multiple filters on each overlay (opacity, grayscale, blur, etc)
 *	Non-invasive overlay (so you can still interact with the content e.g. inspect element or hover)
 *	Sync overlay settings across computers (if you are logged into Chrome)
