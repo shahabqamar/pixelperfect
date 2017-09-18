@@ -74,19 +74,23 @@ $('#screens-container').on('input', '.setting-filter', function() {
     $(this).closest('.field-setting').find('code').text($(this).val());
     var image = $(this).closest('.screen-block').find('.image-object');
     var opacity = $(this).closest('.screen-block').find('input[data-setting=opacity]').val();
+    var offsetTop = $(this).closest('.screen-block').find('input[data-setting=offsetTop]').val();
+    var offsetLeft = $(this).closest('.screen-block').find('input[data-setting=offsetLeft]').val();
     var grayscale = $(this).closest('.screen-block').find('input[data-setting=grayscale]').val();
     var brightness = $(this).closest('.screen-block').find('input[data-setting=brightness]').val();
     var contrast = $(this).closest('.screen-block').find('input[data-setting=contrast]').val();
     var blur = $(this).closest('.screen-block').find('input[data-setting=blur]').val();
     image.css('opacity', opacity);
     image.css('filter', 'grayscale(' + grayscale + '%) ' + 'brightness(' + brightness + '%)' + 'contrast(' + contrast + '%)' + 'blur(' + blur + 'px)');
+    image.css('top', offsetTop);
+    image.css('left', offsetLeft);
     generateSettings();
 });
 
 //on greyscale update
-$('#screens-container').on('change', '.setting-greyscale', function() {
-    $(this).closest('.screen-block').find('.image-object').css('filter', 'grayscale(' + $(this).val() + ')');
-});
+// $('#screens-container').on('change', '.setting-greyscale', function() {
+//     $(this).closest('.screen-block').find('.image-object').css('filter', 'grayscale(' + $(this).val() + ')');
+// });
 
 //on import
 $('#import-settings').on('click', function() {
@@ -152,6 +156,8 @@ var generateSettings = function() {
         settings.push({
             "url": $(this).find('input[data-setting=url]').val(),
             "img_url": $(this).find('input[data-setting=url]').val(),
+            "offsetTop": $(this).find('input[data-setting=offsetTop]').val(),
+            "offsetLeft": $(this).find('input[data-setting=offsetLeft]').val(),
             "opacity": $(this).find('input[data-setting=opacity]').val(),
             "grayscale": $(this).find('input[data-setting=grayscale]').val(),
             "brightness": $(this).find('input[data-setting=brightness]').val(),

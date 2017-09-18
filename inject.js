@@ -18,6 +18,8 @@ function _os_overlay_61445155(settings) {
     //check if os_overlay is already loaded
     var os_overlay = document.getElementById('_os_overlay_61445155');
 
+    console.log(settings);
+
     //if overlay does not exist
     if (os_overlay === null) {
 
@@ -36,7 +38,7 @@ function _os_overlay_61445155(settings) {
             os_overlay_img[i].id = "_os_overlay_img_61445155_" + i;
             os_overlay_img[i].className = "_os_overlay_img_61445155";
             os_overlay_img[i].src = settings[i].url;
-            os_overlay_img[i].style.cssText = 'width: auto; opacity:' + settings[i].opacity + '; filter: grayscale(' + settings[i].grayscale + '%) ' + 'brightness(' + settings[i].brightness + '%) ' + 'contrast(' + settings[i].contrast + '%) ' + 'blur(' + settings[i].blur + 'px);';
+            os_overlay_img[i].style.cssText = 'left:auto; right: auto; margin-top:' + settings[i].offsetTop + 'px;' + 'margin-left:' + settings[i].offsetLeft + 'px;' + 'width: auto; opacity:' + settings[i].opacity + '; filter: grayscale(' + settings[i].grayscale + '%) ' + 'brightness(' + settings[i].brightness + '%) ' + 'contrast(' + settings[i].contrast + '%) ' + 'blur(' + settings[i].blur + 'px);';
             os_overlay.appendChild(os_overlay_img[i]);
 
             var min = "";

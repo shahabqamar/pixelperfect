@@ -100,3 +100,13 @@ figure {
     background: url(../images/bg-transparent.png) center center;
     background-size: cover;
 }
+
+.image-offset-controls {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.control-offset {
+    margin-bottom: 1rem;
+}

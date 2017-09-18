@@ -90,6 +90,12 @@
                         <span class="icon is-small is-left"> <i class="fa fa-image"></i></span>
                     </p>
                     <div class="field">
+                        <div class="control control-offset">
+                            <div>
+                                <input class="input is-small is-mq setting-filter" value="{{offsetTop}}" data-setting="offsetTop" type="number" placeholder="offset Top (&plusmn;px)">
+                                <input class="input is-small is-mq setting-filter" value="{{offsetLeft}}" data-setting="offsetLeft" type="number" placeholder="offset Left (&plusmn;px)">
+                            </div>
+                        </div>
                         <div class="control">
                             <label class="fullwidth field-setting">
                                     Opacity <code>{{opacity}}</code>
@@ -113,12 +119,14 @@
                                 </label>
                         </div>
                     </div>
+
                     <div class="control">
                         <div>
                             <input class="input is-small is-mq setting-filter" value="{{min}}" data-setting="min" type="number" placeholder="min (px)">
                             <input class="input is-small is-mq setting-filter" value="{{max}}" data-setting="max" type="number" placeholder="max (px)">
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
